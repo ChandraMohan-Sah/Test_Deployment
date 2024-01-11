@@ -1,0 +1,51 @@
+------------------------------------------------------------------------------
+What is Serializer in DRF ?
+
+    In Django Rest Framework (DRF), a serializer is a crucial component 
+    that transforms complex data types, such as Django models or querysets, 
+    into Python data types that can be easily converted to JSON and sent 
+    to the client. Conversely, it also converts incoming JSON data into
+    Python data types suitable for processing in a Django view.
+
+    Various Works Done By Serializer: 
+    1) Data Validation: Serializers perform validation on incoming data, ensuring that it meets the expected format and constraints. 
+
+    2) Data Transformation: Serializers convert complex data types, such as Django models, into JSON-compatible representations. 
+
+    3) Handling Relationships: DRF serializers handle relationships between models, including one-to-one, one-to-many, and many-to-many relationships.
+
+    4) Integration with Django Forms: DRF serializers are similar to Django forms, providing a way to define the structure of the data you want to work with. This allows for a smooth transition for developers familiar with Django.
+
+------------------------------------------------------------------------------
+Working With Serializer and Views for API creation
+
+    1.1) serializers.Serializer
+        -> Working with Function Based Views 
+    
+    1.2) serializers.Serializer
+        -> Working with Class Based Views  
+            APIVIEW -> Simple Class Based Views
+                    -> Generic Views 
+                    -> Mixins 
+                    -> Concrete  View Classes
+                    -> ViewSets   
+
+    2.1) serializers.ModelSerializer
+        -> Working with Function Based Views 
+    
+    2.2) serializers.ModelSerializer
+        -> Working with Class Based Views  
+            APIVIEW ->Simple Class Based Views
+                    -> Generic Views 
+                    -> Mixins 
+                    -> Concrete  View Classes
+                    ->ViewSets   
+
+----------------------------------------------------------------------------------
+Serializer Improvement Through Validators:
+    Three Types of Validators:
+        1.field level - Individual field (like name) is validated at once.
+        2.object level - As a whole comparision of objects are done and validation is performed.
+        3.validators - Individual field (like name) is validated with validator keyword and function.
+        
+----------------------------------------------------------------------------------
