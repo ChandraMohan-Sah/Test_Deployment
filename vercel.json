@@ -1,22 +1,14 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "watchmate/wsgi.py",
-            "use": "@vercel/python",
-            "config": {
-                "maxLambdaSize": "15mb",
-                "runtime": "python3.9"
-            }
-        },
-        {
-            "src": "build_files.sh",
-            "use": "@vercel/static-build",
-            "config": {
-                "distDir": "staticfiles_build"
-            }
-        }
-    ],
+    "builds": [{
+        "src": "watchmate/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    },
+    {
+        "src": "build_files.sh",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "staticfiles_build" }
+    }],
     "routes": [
         {
             "src": "/static/(.*)",
@@ -24,7 +16,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "/watchmate/wsgi.py"
+            "dest": "watchmate/wsgi.py"
         }
     ]
 }
